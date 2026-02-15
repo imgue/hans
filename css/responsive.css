@@ -8,17 +8,17 @@
     text-align: center !important;
   }
 
-  .navbar {
+  .nav-desktop {
     display: none;
+  }
+
+  img {
+    pointer-events: none;
   }
 
   h1 {
     font-size: 40px;
     line-height: 45px;
-  }
-
-  h2 {
-
   }
 
   h5 {
@@ -28,19 +28,76 @@
 
   /* Secao-01 */
   .secao-01 {
-    padding: 300px 0 150px;
+    padding: 70px 0;
     height: 100vh;
     color: var(--cinza);
+  }
+
+  .secao-01 h5 {
+    margin: auto !important;
+  }
+
+  /* Secao-05 */
+  .secao-05 {
+    background: #060606;
+  }
+
+  /* Planejados-01 */
+  .planejados-01 {
+    padding: 300px 0 1200px;
+    height: 100vh;
+  }
+
+  /* Protech-01 */
+  .protech-01 {
+    padding: 150px 0 650px;
+    background: url("../assets/background/protech-01.png") bottom/cover no-repeat;
+    height: 100vh;
+  }
+
+  /* Privilege-01 */
+  .privilege-01 {
+    padding: 200px 0 500px;
+  }
+
+  /* Consultoria-01 */
+  .consultoria-01 {
+    padding: 150px 0 650px;
+  }
+
+  /* Consultoria-02 */
+  .consultoria-02 {
+    margin-top: -100px;
   }
 
   .logo {
     max-width: 280px;
   }
 
-  footer {}
+  .wpp {
+    bottom: 10px !important;
+    right: 10px !important;
+  }
+
+  .noise {
+    opacity: 0.1;
+  }
+
+  .mobile-none {
+    display: none;
+  }
+
+  .video-vertical {
+    width: 100%;
+  }
+
+  #cinza {
+    filter: grayscale(0%);
+  }
 
 }
 
+/* Externos */
 .wpp {
   position: fixed;
   cursor: pointer;
@@ -90,4 +147,72 @@
 
 .owl-dots {
   display: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 32px;
+  color: white;
+  background: rgba(0, 0, 0, 0.751);
+  padding: 4px 15px 10px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.184);
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.942);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.menu-content a {
+  color: rgba(255, 255, 255, 0.507);
+  text-decoration: none;
+  font-size: 28px;
+  margin: 15px 0;
+  transition: 0.2s;
+}
+
+.menu-content a:hover {
+  transform: scale(1.1);
+}
+
+.close-area {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+}
+
+#menu-toggle:checked~.menu-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (min-width: 768px) {
+
+  .menu-btn,
+  .menu-overlay {
+    display: none;
+  }
 }

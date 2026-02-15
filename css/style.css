@@ -239,7 +239,7 @@ footer {
   filter: grayscale(0%);
 }
 
-#caixa-texto {
+.caixa-texto {
   background-color: rgba(255, 255, 255, 0.1);
   padding: 13px 20px;
   border-radius: 30px;
